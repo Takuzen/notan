@@ -8,23 +8,23 @@ export default function Notes() {
       <Image
           src="/note_sample_0.png"
           alt="Fuse Logo"
-          width={382}
-          height={519}
+          width={191}
+          height={259}
           priority
          />
          </Link>
       <Image
           src="/note_sample_1.png"
           alt="Fuse Logo"
-          width={382}
-          height={519}
+          width={191}
+          height={259}
           priority
          />
       <Image
           src="/note_sample_2.png"
           alt="Fuse Logo"
-          width={382}
-          height={519}
+          width={191}
+          height={259}
           priority
          />
     </main>

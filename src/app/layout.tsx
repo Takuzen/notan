@@ -4,8 +4,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'FuseNote',
-  description: 'Search and Backup Your Precious Notebooks',
+  title: 'Notan',
+  description: 'Seamless Notes on Paper and Screen',
 }
 
 export default function RootLayout({
