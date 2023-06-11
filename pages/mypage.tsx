@@ -6,9 +6,26 @@ import '@algolia/autocomplete-theme-classic';
 
 export default function Mypage() {
   useEffect(() => {
+    const fetchData = async () => {
+        try {
+        
+            const querySnapshot = await db.collection("users").get();
+
+            querySnapshot.forEach((doc:any) => {
+                console.log(`${doc.id} => ${doc.data()}`);
+            });
+
+        } catch (err) {
+            console.error("Error fetching data: ", err);
+        }
+    };
+    fetchData();
+}, []);
+
+  useEffect(() => {
     autocomplete({
       container: '#autocomplete',
-      placeholder: 'Search for products',
+      placeholder: 'Search across all notes',
       getSources() {
         return [];
       },
@@ -16,25 +33,21 @@ export default function Mypage() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-centet justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <div id="autocomplete"></div>
+    <main className="">
+      <div className="">
 
-        <Image
-          src="/roam_image.png"
-          alt="Roam Image"
-          width={450}
-          height={300}
-          priority
-        />
-
+        <div id="autocomplete" className='shadow w-3'></div>
+        
         <div className="relative flex place-items-center text-3xl">
           <p>
             <Link href="/notes">
-              最近のノート
+              ノートを見る
             </Link>
           </p>
         </div>
+        
+        
+
       </div>
     </main>
   )
