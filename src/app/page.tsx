@@ -63,11 +63,13 @@ export default function Home() {
         
       </div>
       <div className="relative flex place-items-center text-3xl">
-        <p>
-          Just send your notes to us. <br></br>
-          You would get them beautifully digitalized, <br></br>
-          with our Seamless Notes on Paper and Screen. <br></br> <br></br>
-          <Link href="/mypage"><u>Try the experience -&gt;</u></Link>
+        <p className='leading-10 tracking-widest'>
+          メモやノートを送るだけ。 <br></br> <br></br>
+          あなたの筆跡を簡単に検索できて、いつでも見れる。 <br></br> <br></br>
+          万に一つ、失くしても安心。 <br></br> <br></br> 
+          デジタルノートと併用して、 <br></br> <br></br> 
+          没頭できる無縫なアウトプット体験をしよう。<br></br> <br></br>
+          <Link href="/mypage"><u>体験する -&gt;</u></Link>
         </p>
       </div>
 

@@ -33,3 +33,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# firebase
+notan-aefef-firebase-adminsdk-dspof-40322a2191.json
