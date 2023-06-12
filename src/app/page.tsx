@@ -24,7 +24,7 @@ export default function Home() {
 
     const analytics = getAnalytics(app);
 
-    async function testFirestoreConnection() {
+    /*async function testFirestoreConnection() {
       try {
         const notesCollection = collection(db, 'notes');
 
@@ -37,7 +37,7 @@ export default function Home() {
       }
     }
 
-    testFirestoreConnection();
+    testFirestoreConnection();*/
 
   }, []);
 
@@ -50,7 +50,7 @@ export default function Home() {
         </p>
         
         <p className='font-serif text-1xl font-semibold text-gray-400'>
-          <Link href="/story">開発物語</Link>
+          <Link href="/">開発物語</Link>
         </p>
 
         <p className='font-serif text-1xl font-semibold text-gray-400'>
@@ -58,7 +58,7 @@ export default function Home() {
         </p>
 
         <p className='font-serif text-1xl font-semibold text-white bg-red-500 rounded-full px-8 py-2'>
-          <Link href="/send">今すぐ送る</Link>
+          <Link href="/signUp">今すぐ送る</Link>
         </p>
         
       </div>
@@ -66,10 +66,10 @@ export default function Home() {
         <p className='leading-10 tracking-widest'>
           メモやノートを送るだけ。 <br></br> <br></br>
           あなたの筆跡を簡単に検索できて、いつでも見れる。 <br></br> <br></br>
-          万に一つ、失くしても安心。 <br></br> <br></br> 
+          万に一つ、失くしても安心のバックアップ。 <br></br> <br></br> 
           デジタルノートと併用して、 <br></br> <br></br> 
-          没頭できる無縫なアウトプット体験をしよう。<br></br> <br></br>
-          <Link href="/mypage"><u>体験する -&gt;</u></Link>
+          無縫な没頭できるアウトプット体験をしよう。<br></br> <br></br> <br></br>
+          <span className=''><Link href="/mypage_trial"><u>体験する <span className='tracking-normal'>-&gt;</span></u></Link></span>
         </p>
       </div>
 
