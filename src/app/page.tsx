@@ -42,35 +42,40 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
+    <main className="flex min-h-screen flex-col items-center justify-between p-8 sm:p-24">
+      <div className='flex w-full justify-between items-center'>
         
-        <p className='font-serif text-2xl font-bold'>
-          Notan
-        </p>
+          <p className='font-serif text-2xl font-bold'>
+            notan
+          </p>
         
-        <p className='font-serif text-1xl font-semibold text-gray-400'>
-          <Link href="/">開発物語</Link>
-        </p>
+          <p className='hidden font-serif text-1xl font-semibold text-gray-400'>
+            <Link href="/">開発物語</Link>
+          </p>
 
-        <p className='font-serif text-1xl font-semibold text-gray-400'>
-          ログイン
-        </p>
+          <p className='hidden font-serif text-1xl font-semibold text-gray-400'>
+            ログイン
+          </p>
 
-        <p className='font-serif text-1xl font-semibold text-white bg-red-500 rounded-full px-8 py-2'>
-          <Link href="/signUp">今すぐ送る</Link>
-        </p>
-        
+          <p className='inline sm:hidden font-serif text-1xl font-semibold text-white bg-red-500 rounded-full px-4 py-3 max-w-[144px]'>
+            <Link href="/signUp">送</Link>
+          </p>
+
+          <p className='hidden sm:inline font-serif text-1xl font-semibold text-white bg-red-500 rounded-full px-8 py-2 max-w-[144px]'>
+            <Link href="/signUp">今すぐ送る</Link>
+          </p>          
+      
       </div>
-      <div className="relative flex place-items-center text-3xl">
+
+      <div className="relative flex flex-col place-items-center text-xl mt-10 lg:mt-12">
         <p className='leading-10 tracking-widest'>
           メモやノートを送るだけ。 <br></br> <br></br>
           あなたの筆跡を簡単に検索できて、いつでも見れる。 <br></br> <br></br>
-          万に一つ、失くしても安心のバックアップ。 <br></br> <br></br> 
+          万に一つ失くしても、安心のバックアップ。 <br></br> <br></br> 
           デジタルノートと併用して、 <br></br> <br></br> 
           無縫な没頭できるアウトプット体験をしよう。<br></br> <br></br> <br></br>
-          <span className=''><Link href="/mypage_trial"><u>体験する <span className='tracking-normal'>-&gt;</span></u></Link></span>
         </p>
+        <p className='place-self-end'><Link href="/mypage_trial"><u>体験する <span className='tracking-normal'>-&gt;</span></u></Link></p>
       </div>
 
       <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-1 lg:text-center">

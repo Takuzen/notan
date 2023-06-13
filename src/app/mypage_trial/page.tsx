@@ -26,7 +26,7 @@ export default function Mypage() {
   useEffect(() => {
     autocomplete({
       container: '#autocomplete',
-      placeholder: 'Search across all notes',
+      placeholder: 'フルテキスト検索（まもなく、登場）',
       getSources() {
         return [];
       },
@@ -34,32 +34,82 @@ export default function Mypage() {
   }, []);
 
   return (
-    <main className="flex flex-col items-center justify-between p-24">
-      <div className='flex flex-col w-full'>
+    <main className="flex flex-col items-center justify-between p-3 sm:p-24">
+      <div className='flex flex-col w-full max-w-full'>
         <div id="autocomplete" className='shadow-lg'></div>
-        <div className="flex flex-row mt-10 z-10 w-full items-center justify-between">
+        <div className="flex flex-wrap mt-10 z-10 w-full items-center justify-between">
           <Link href="https://issuu.com/takuzen/docs/notebook_0_p10">
           <Image
+              className='object-fill'
               src="/note_sample_0.png"
               alt="Fuse Logo"
-              width={191}
-              height={259}
+              width={100}
+              height={100}
               priority
             />
             </Link>
           <Image
+              className='object-fill'
               src="/note_sample_1.png"
               alt="Fuse Logo"
-              className='object-fit'
-              width={191}
-              height={259}
+              width={100}
+              height={100}
               priority
             />
           <Image
+            className='object-fill'
               src="/note_sample_2.png"
               alt="Fuse Logo"
-              width={191}
-              height={259}
+              width={100}
+              height={100}
+              priority
+            />
+          <Image
+            className='object-fill'
+              src="/scan_sample_0.png"
+              alt="Fuse Logo"
+              width={100}
+              height={100}
+              priority
+            />
+          <Image
+            className='object-fill'
+              src="/scan_sample_1.png"
+              alt="Fuse Logo"
+              width={100}
+              height={100}
+              priority
+            />
+          <Image
+            className='object-fill'
+              src="/note_sample_3.png"
+              alt="Fuse Logo"
+              width={100}
+              height={100}
+              priority
+            />
+          <Image
+            className='object-fill'
+              src="/scan_sample_2.png"
+              alt="Fuse Logo"
+              width={100}
+              height={100}
+              priority
+            />
+          <Image
+            className='object-fill'
+              src="/note_sample_4.png"
+              alt="Fuse Logo"
+              width={100}
+              height={100}
+              priority
+            />
+          <Image
+            className='object-fill'
+              src="/note_sample_5.png"
+              alt="Fuse Logo"
+              width={100}
+              height={100}
               priority
             />
         </div>
