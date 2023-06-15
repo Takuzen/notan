@@ -75,7 +75,7 @@ export default function Home() {
           デジタルノートと併用して、 <br></br> <br></br> 
           無縫な没頭できるアウトプット体験をしよう。<br></br> <br></br> <br></br>
         </p>
-        <p className='place-self-end'><Link href="/mypage_trial"><u>体験する <span className='tracking-normal'>-&gt;</span></u></Link></p>
+        <p className='place-self-end'><Link href="/mypage_trial"><u>無料で使ってみる <span className='tracking-normal'>-&gt;</span></u></Link></p>
       </div>
 
       <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-1 lg:text-center">

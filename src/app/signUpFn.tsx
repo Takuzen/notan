@@ -116,7 +116,7 @@ export default function SignUp() {
       <h2 className="text-2xl font-semibold mb-6 text-center">会員登録</h2>
       <p className='text-center'>大切なお客様の書類をお預かりする為、<br /><br />
         ご連絡用のEメールと、<br />
-        お客様情報の設定をお願いしております。<br /><br />
+        お客様情報の設定をお願いします。<br /><br />
         お手数ですが、ご記入ください。
       </p>
       {error && <p className="text-red-500 text-center mt-6">{error}</p>} {/* Display error message */}

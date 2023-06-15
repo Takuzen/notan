@@ -112,6 +112,79 @@ export default function Mypage() {
               height={100}
               priority
             />
+          <Image
+            className='object-fill'
+              src="/scan_sample_3.png"
+              alt="Fuse Logo"
+              width={100}
+              height={100}
+              priority
+            />
+          <Image
+            className='object-fill'
+              src="/scan_sample_4.png"
+              alt="Fuse Logo"
+              width={100}
+              height={100}
+              priority
+            />
+          <Image
+            className='object-fill'
+              src="/scan_sample_5.png"
+              alt="Fuse Logo"
+              width={100}
+              height={100}
+              priority
+            />
+          <Image
+            className='object-fill'
+              src="/scan_sample_6.png"
+              alt="Fuse Logo"
+              width={100}
+              height={100}
+              priority
+            />
+          <Image
+            className='object-fill'
+              src="/scan_sample_7.png"
+              alt="Fuse Logo"
+              width={100}
+              height={100}
+              priority
+            />
+          <Image
+            className='object-fill'
+              src="/note_sample_6.png"
+              alt="Fuse Logo"
+              width={100}
+              height={100}
+              priority
+            />
+          <Image
+            className='object-fill'
+              src="/note_sample_7.png"
+              alt="Fuse Logo"
+              width={100}
+              height={100}
+              priority
+            />
+          <Image
+            className='object-fill'
+              src="/note_sample_8.png"
+              alt="Fuse Logo"
+              width={100}
+              height={100}
+              priority
+            />
+          <Image
+            className='object-fill'
+              src="/note_sample_9.png"
+              alt="Fuse Logo"
+              width={100}
+              height={100}
+              priority
+            />
+          
         </div>
       </div>
     </main>
