@@ -37,154 +37,156 @@ export default function Mypage() {
     <main className="flex flex-col items-center justify-between p-3 sm:p-24">
       <div className='flex flex-col w-full max-w-full'>
         <div id="autocomplete" className='shadow-lg'></div>
-        <div className="flex flex-wrap mt-10 z-10 w-full items-center justify-between">
-          <Link href="https://issuu.com/takuzen/docs/notebook_0_p10">
-          <Image
+        <div className="flex mt-10 z-10 w-full">
+          <div className='flex flex-wrap justify-between gap-x-5 gap-y-8'>
+            <Link href="https://issuu.com/takuzen/docs/notebook_0_p10">
+            <Image
+                className='object-fill'
+                src="/note_sample_0.png"
+                alt="Fuse Logo"
+                width={100}
+                height={100}
+                priority
+              />
+              </Link>
+            <Image
+                className='object-fill'
+                src="/note_sample_1.png"
+                alt="Fuse Logo"
+                width={100}
+                height={100}
+                priority
+              />
+            <Image
               className='object-fill'
-              src="/note_sample_0.png"
-              alt="Fuse Logo"
-              width={100}
-              height={100}
-              priority
-            />
-            </Link>
-          <Image
+                src="/note_sample_2.png"
+                alt="Fuse Logo"
+                width={100}
+                height={100}
+                priority
+              />
+            <Image
               className='object-fill'
-              src="/note_sample_1.png"
-              alt="Fuse Logo"
-              width={100}
-              height={100}
-              priority
-            />
-          <Image
-            className='object-fill'
-              src="/note_sample_2.png"
-              alt="Fuse Logo"
-              width={100}
-              height={100}
-              priority
-            />
-          <Image
-            className='object-fill'
-              src="/scan_sample_0.png"
-              alt="Fuse Logo"
-              width={100}
-              height={100}
-              priority
-            />
-          <Image
-            className='object-fill'
-              src="/scan_sample_1.png"
-              alt="Fuse Logo"
-              width={100}
-              height={100}
-              priority
-            />
-          <Image
-            className='object-fill'
-              src="/note_sample_3.png"
-              alt="Fuse Logo"
-              width={100}
-              height={100}
-              priority
-            />
-          <Image
-            className='object-fill'
-              src="/scan_sample_2.png"
-              alt="Fuse Logo"
-              width={100}
-              height={100}
-              priority
-            />
-          <Image
-            className='object-fill'
-              src="/note_sample_4.png"
-              alt="Fuse Logo"
-              width={100}
-              height={100}
-              priority
-            />
-          <Image
-            className='object-fill'
-              src="/note_sample_5.png"
-              alt="Fuse Logo"
-              width={100}
-              height={100}
-              priority
-            />
-          <Image
-            className='object-fill'
-              src="/scan_sample_3.png"
-              alt="Fuse Logo"
-              width={100}
-              height={100}
-              priority
-            />
-          <Image
-            className='object-fill'
-              src="/scan_sample_4.png"
-              alt="Fuse Logo"
-              width={100}
-              height={100}
-              priority
-            />
-          <Image
-            className='object-fill'
-              src="/scan_sample_5.png"
-              alt="Fuse Logo"
-              width={100}
-              height={100}
-              priority
-            />
-          <Image
-            className='object-fill'
-              src="/scan_sample_6.png"
-              alt="Fuse Logo"
-              width={100}
-              height={100}
-              priority
-            />
-          <Image
-            className='object-fill'
-              src="/scan_sample_7.png"
-              alt="Fuse Logo"
-              width={100}
-              height={100}
-              priority
-            />
-          <Image
-            className='object-fill'
-              src="/note_sample_6.png"
-              alt="Fuse Logo"
-              width={100}
-              height={100}
-              priority
-            />
-          <Image
-            className='object-fill'
-              src="/note_sample_7.png"
-              alt="Fuse Logo"
-              width={100}
-              height={100}
-              priority
-            />
-          <Image
-            className='object-fill'
-              src="/note_sample_8.png"
-              alt="Fuse Logo"
-              width={100}
-              height={100}
-              priority
-            />
-          <Image
-            className='object-fill'
-              src="/note_sample_9.png"
-              alt="Fuse Logo"
-              width={100}
-              height={100}
-              priority
-            />
-          
+                src="/scan_sample_0.png"
+                alt="Fuse Logo"
+                width={100}
+                height={100}
+                priority
+              />
+            <Image
+              className='object-fill'
+                src="/scan_sample_1.png"
+                alt="Fuse Logo"
+                width={100}
+                height={100}
+                priority
+              />
+            <Image
+              className='object-fill'
+                src="/note_sample_3.png"
+                alt="Fuse Logo"
+                width={100}
+                height={100}
+                priority
+              />
+            <Image
+              className='object-fill'
+                src="/scan_sample_2.png"
+                alt="Fuse Logo"
+                width={100}
+                height={100}
+                priority
+              />
+            <Image
+              className='object-fill'
+                src="/note_sample_4.png"
+                alt="Fuse Logo"
+                width={100}
+                height={100}
+                priority
+              />
+            <Image
+              className='object-fill'
+                src="/note_sample_5.png"
+                alt="Fuse Logo"
+                width={100}
+                height={100}
+                priority
+              />
+            <Image
+              className='object-fill'
+                src="/scan_sample_3.png"
+                alt="Fuse Logo"
+                width={100}
+                height={100}
+                priority
+              />
+            <Image
+              className='object-fill'
+                src="/scan_sample_4.png"
+                alt="Fuse Logo"
+                width={100}
+                height={100}
+                priority
+              />
+            <Image
+              className='object-fill'
+                src="/scan_sample_5.png"
+                alt="Fuse Logo"
+                width={100}
+                height={100}
+                priority
+              />
+            <Image
+              className='object-fill'
+                src="/scan_sample_6.png"
+                alt="Fuse Logo"
+                width={100}
+                height={100}
+                priority
+              />
+            <Image
+              className='object-fill'
+                src="/scan_sample_7.png"
+                alt="Fuse Logo"
+                width={100}
+                height={100}
+                priority
+              />
+            <Image
+              className='object-fill'
+                src="/note_sample_6.png"
+                alt="Fuse Logo"
+                width={100}
+                height={100}
+                priority
+              />
+            <Image
+              className='object-fill'
+                src="/note_sample_7.png"
+                alt="Fuse Logo"
+                width={100}
+                height={100}
+                priority
+              />
+            <Image
+              className='object-fill'
+                src="/note_sample_8.png"
+                alt="Fuse Logo"
+                width={100}
+                height={100}
+                priority
+              />
+            <Image
+              className='object-fill'
+                src="/note_sample_9.png"
+                alt="Fuse Logo"
+                width={100}
+                height={100}
+                priority
+              />
+          </div>
+          {/* 最後の行だけ左詰にしたい */}       
         </div>
       </div>
     </main>
