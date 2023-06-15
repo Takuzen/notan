@@ -70,10 +70,11 @@ export default function Home() {
       <div className="relative flex flex-col place-items-center text-xl mt-10 lg:mt-12">
         <p className='leading-10 tracking-widest'>
           メモやノートを送るだけ。 <br></br> <br></br>
+          最新のAIスキャンで、 <br></br> <br></br>
           あなたの筆跡を簡単に検索できて、いつでも見れる。 <br></br> <br></br>
           万に一つ失くしても、安心のバックアップ。 <br></br> <br></br> 
-          デジタルノートと併用して、 <br></br> <br></br> 
-          無縫な没頭できるアウトプット体験をしよう。<br></br> <br></br> <br></br>
+          セレンディピティ・コーサー機能で、 <br></br> <br></br> 
+          ひらめきが生まれる新たなノート体験をしよう。<br></br> <br></br> <br></br>
         </p>
         <p className='place-self-end'><Link href="/mypage_trial"><u>無料で使ってみる <span className='tracking-normal'>-&gt;</span></u></Link></p>
       </div>
