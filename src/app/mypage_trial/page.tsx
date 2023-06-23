@@ -7,13 +7,24 @@ export default function Mypage() {
     <main className="flex flex-col items-center p-3 sm:p-24">
       <div className='w-full flex justify-end pt-7 pr-5 sm:pt-0'>
         <span className="ball mt-3"></span>
-        <Image
-          className=''
-          src="/search-outline.svg"
-          alt='Search Icon'
-          width={30}
-          height={30}
-          priority></Image>
+        <div className='flex gap-3'>
+          <Image
+            className=''
+            src="/search-outline.svg"
+            alt='Search Icon'
+            width={30}
+            height={30}
+            priority></Image>
+            <Link href="/signUp">
+              <Image
+              className=''
+              src="/add-outline.svg"
+              alt='Add Icon'
+              width={30}
+              height={30}
+              priority></Image>
+            </Link>
+        </div>
       </div>
       <div className='flex flex-col w-full max-w-full'>
         <div className="flex mt-10 z-10 w-full">
