@@ -75,7 +75,7 @@ export default function Home() {
           <div className="w-full text-end">
             <textarea
               className="w-full h-32 resize-none"
-              placeholder="書き始める..."
+              placeholder="6月24日 夏至"
               value={note}
               onChange={handleNoteChange}
             />
