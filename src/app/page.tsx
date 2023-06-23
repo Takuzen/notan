@@ -1,5 +1,5 @@
 'use client'
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { initializeApp } from 'firebase/app';
@@ -7,6 +7,8 @@ import { getFirestore, collection, addDoc } from 'firebase/firestore';
 import { getAnalytics } from 'firebase/analytics';
 
 export default function Home() {
+  const [note, setNote] = useState('');
+
   useEffect(() => {
     const firebaseConfig = {
       apiKey: "AIzaSyCkqzaX5BtTGOCig_ET4JC6lnalRDCEerg",
@@ -24,76 +26,114 @@ export default function Home() {
 
     const analytics = getAnalytics(app);
 
-    /*async function testFirestoreConnection() {
-      try {
-        const notesCollection = collection(db, 'notes');
-
-        // Add a test document to Firestore
-        const docRef = await addDoc(notesCollection, { message: 'Test note' });
-
-        console.log('Firestore connection is working. Document added with ID:', docRef.id);
-      } catch (error) {
-        console.error('Error testing Firestore connection:', error);
-      }
-    }
-
-    testFirestoreConnection();*/
-
   }, []);
 
+  
+
+  const handleNoteChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setNote(event.target.value);
+  };
+
+  const handleNoteSubmit = async () => {
+    try {
+      const docRef = await addDoc(collection(db, 'notes'), {
+        content: note,
+        timestamp: new Date().toISOString(),
+      });
+      console.log('Note added with ID: ', docRef.id);
+      setNote('');
+    } catch (error) {
+      console.error('Error adding note: ', error);
+    }
+  };
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-8 sm:p-24">
-      <div className='flex w-full justify-between items-center'>
-        
-          <p className='font-serif text-2xl font-bold'>
-            notan
-          </p>
-        
-          <p className='hidden font-serif text-1xl font-semibold text-gray-400'>
+    <main className="p-8 sm:p-24">
+      <div className="flex flex-col">
+        <div className="flex w-full justify-between items-center">
+          <p className="font-serif text-2xl font-bold">notan</p>
+          <p className="hidden font-serif text-1xl font-semibold text-gray-400">
             <Link href="/">開発物語</Link>
           </p>
-
-          <p className='hidden font-serif text-1xl font-semibold text-gray-400'>
+          <p className="hidden font-serif text-1xl font-semibold text-gray-400">
             ログイン
           </p>
+          <Link href="/mypage_trial">
+            <div className="pt-2 cursor-pointer">
+              <Image
+                className="object-contain"
+                src="/library-outline.svg"
+                alt="Library Logo"
+                width={30}
+                height={30}
+                priority
+              />
+            </div>
+          </Link>
+        </div>
 
-          <p className='inline sm:hidden font-serif text-1xl font-semibold text-white bg-red-500 rounded-full px-4 py-3 max-w-[144px]'>
-            <Link href="/signUp">送</Link>
-          </p>
+        <div className="flex flex-col items-center mt-12">
+          <div className="w-full text-end">
+            <textarea
+              className="w-full h-32 resize-none"
+              placeholder="書き始める..."
+              value={note}
+              onChange={handleNoteChange}
+            />
+            {/* 
+            <button
+              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
+              onClick={handleNoteSubmit}
+            >
+              保存
+            </button>
+            */}
+          </div>
+        </div>
 
-          <p className='hidden sm:inline font-serif text-1xl font-semibold text-white bg-red-500 rounded-full px-8 py-2 max-w-[144px]'>
-            <Link href="/signUp">今すぐ送る</Link>
-          </p>          
-      
+        <div className="text-center rounded-lg border fixed bottom-5 left-0 right-0 mx-auto w-11/12 sm:w-9/12 lg:w-7/12 xl:w-5/12 p-5 shadow-lg">
+          <Link href="">
+            <p className="text-md opacity-60">
+              <span className="ball"></span> いま何を考えていますか?
+            </p>
+          </Link>
+        </div>
       </div>
 
-      <div className="relative flex flex-col place-items-center text-xl mt-10 lg:mt-12">
-        <p className='leading-10 tracking-widest'>
-          メモ帳や書類を送るだけ。 <br></br> <br></br>
-          最新のAIスキャンで、 <br></br> <br></br>
-          あなたの筆跡を簡単に検索できて、いつでも見れる。 <br></br> <br></br>
-          万に一つ失くしても、安心のバックアップ。 <br></br> <br></br> 
-          セレンディピティ・コーサー機能で、 <br></br> <br></br> 
-          ひらめきが生まれる対話式なノート体験をしよう。<br></br> <br></br> <br></br>
-        </p>
-        <p className='place-self-end'><Link href="/mypage_trial"><u>無料で使ってみる <span className='tracking-normal'>-&gt;</span></u></Link></p>
-      </div>
+      <style jsx>{`
+        .ball {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #728fce;
+          animation: ball-roll 4s linear infinite;
+          position: relative;
+          top: 5px;
+          left: -20px;
+        }
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-1 lg:text-center">
-        <a
-          href="/mypage"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl`}>
-           
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            
-          </p>
-        </a>
-      </div>
+        @keyframes ball-roll {
+          0% {
+            transform: translate(0, 0);
+          }
+          25% {
+            transform: translate(calc(100% - 1.5rem), calc(100% - 1.5rem));
+            background-color: #728fce;
+          }
+          50% {
+            transform: translate(calc(100% - 1.5rem), 0);
+            background-color: #728fce;
+          }
+          75% {
+            transform: translate(0, calc(100% - 1.5rem));
+            background-color: #728fce;
+          }
+          100% {
+            transform: translate(0, 0);
+            background-color: #728fce;
+          }
+        }
+      `}</style>
     </main>
   )
 }
