@@ -1,42 +1,21 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect } from 'react';
-import { autocomplete } from '@algolia/autocomplete-js';
-import '@algolia/autocomplete-theme-classic';
 
 export default function Mypage() {
-  useEffect(() => {
-    const fetchData = async () => {
-        try {
-        
-            const querySnapshot = await db.collection("users").get();
-
-            querySnapshot.forEach((doc:any) => {
-                console.log(`${doc.id} => ${doc.data()}`);
-            });
-
-        } catch (err) {
-            console.error("Error fetching data: ", err);
-        }
-    };
-    fetchData();
-}, []);
-
-  useEffect(() => {
-    autocomplete({
-      container: '#autocomplete',
-      placeholder: 'GPT検索（まもなく、登場）',
-      getSources() {
-        return [];
-      },
-    });
-  }, []);
-
   return (
-    <main className="flex flex-col items-center justify-between p-3 sm:p-24">
+    <main className="flex flex-col items-center p-3 sm:p-24">
+      <div className='w-full flex justify-end pt-7 pr-5 sm:pt-0'>
+        <span className="ball mt-3"></span>
+        <Image
+          className=''
+          src="/search-outline.svg"
+          alt='Search Icon'
+          width={30}
+          height={30}
+          priority></Image>
+      </div>
       <div className='flex flex-col w-full max-w-full'>
-        <div id="autocomplete" className='shadow-lg'></div>
         <div className="flex mt-10 z-10 w-full">
           <div className='flex flex-wrap justify-between gap-x-5 gap-y-8'>
             <Link href="https://issuu.com/takuzen/docs/notebook_0_p10">
@@ -293,6 +272,42 @@ export default function Mypage() {
           {/* 最後の行だけ左詰にしたい */}       
         </div>
       </div>
+
+      <style jsx>{`
+        .ball {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #728fce;
+          animation: ball-roll 4s linear infinite;
+          position: relative;
+          top: 5px;
+          left: -20px;
+        }
+
+        @keyframes ball-roll {
+          0% {
+            transform: translate(0, 0);
+          }
+          25% {
+            transform: translate(calc(100% - 1.5rem), calc(100% - 1.5rem));
+            background-color: #728fce;
+          }
+          50% {
+            transform: translate(calc(100% - 1.5rem), 0);
+            background-color: #728fce;
+          }
+          75% {
+            transform: translate(0, calc(100% - 1.5rem));
+            background-color: #728fce;
+          }
+          100% {
+            transform: translate(0, 0);
+            background-color: #728fce;
+          }
+        }
+      `}</style>
     </main>
   )
 }
