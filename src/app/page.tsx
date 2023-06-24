@@ -91,7 +91,7 @@ export default function Home() {
         </div>
 
         <div className="text-center rounded-lg border fixed bottom-5 left-0 right-0 mx-auto w-11/12 sm:w-9/12 lg:w-7/12 xl:w-5/12 p-5 shadow-lg">
-          <Link href="">
+          <Link href="https://heypi.com/talk">
             <p className="text-md opacity-60">
               <span className="ball"></span> いま何を考えていますか?
             </p>
