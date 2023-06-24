@@ -8,22 +8,16 @@ export default function Mypage() {
       <div className='w-full flex justify-end pt-7 pr-5 sm:pt-0'>
         <span className="ball mt-3"></span>
         <div className='flex gap-3'>
-          <Image
+          <svg className="w-[30px]" viewBox="0 0 512 512"><path fill="none" stroke="#d3d3d2" stroke-miterlimit="10" stroke-width="32" d="M221.09 64a157.09 157.09 0 1 0 157.09 157.09A157.1 157.1 0 0 0 221.09 64z"/><path fill="none" stroke="#d3d3d2" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29 448 448"/></svg>          
+          <Link href="/signUp">
+            <Image
             className=''
-            src="/search-outline.svg"
-            alt='Search Icon'
+            src="/add-outline.svg"
+            alt='Add Icon'
             width={30}
             height={30}
             priority></Image>
-            <Link href="/signUp">
-              <Image
-              className=''
-              src="/add-outline.svg"
-              alt='Add Icon'
-              width={30}
-              height={30}
-              priority></Image>
-            </Link>
+          </Link>
         </div>
       </div>
       <div className='flex flex-col w-full max-w-full'>
